@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ include "chartA.fullname" . }}
+  labels:
+    {{- include "chartA.labels" . | nindent 4 }}
+spec:
+  containers:
+    - name: centos
+      image: centos:7
+      command:
+        - "sleep"
+        - "100"
+      env:
+        - name: name
+          value: "dasari"
