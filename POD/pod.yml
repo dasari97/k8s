@@ -11,3 +11,6 @@ spec:
       command:
         - "sleep"
         - "100"
+      env:
+        - name: name
+          value: "dasari"
