@@ -9,4 +9,5 @@ spec:
     - name: centos
       image: centos:7
       command:
-        - "uname"
+        - "sleep"
+        - "100"
