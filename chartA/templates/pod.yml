@@ -13,4 +13,4 @@ spec:
         - "100"
       envFrom:
       - configMapRef:
-          name: sample
+          name: {{ include "chartA.fullname" . }}-cm
