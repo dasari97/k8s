@@ -14,3 +14,5 @@ spec:
       envFrom:
       - configMapRef:
           name: {{ include "chart1.fullname" . }}-cm
+      - secretKeyRef:
+          name: {{  include "chart1.fullname" . }}-secret
