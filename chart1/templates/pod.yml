@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: {{ include "chart1.fullname" . }}
+  name: {{ .Values.podName }}
   labels:
     {{- include "chart1.labels" . | nindent 4 }}
 spec:
   containers:
-    - name: centos
-      image: centos:7
+    - name: {{ .Values.containers.name }}
+      image: {{ .Values.containers.image }}
       command:
         - "sleep"
         - "30000"
