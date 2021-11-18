@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ include "chart1.fullname" . }}
+  labels:
+    {{- include "chart1.labels" . | nindent 4 }}
+spec:
+  containers:
+    - name: centos
+      image: centos:7
+      command:
+        - "sleep"
+        - "100"
+      envFrom:
+      - configMapRef:
+          name: {{ include "chart1.fullname" . }}-cm
