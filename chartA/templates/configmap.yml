@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ include "chartA.fullname" . }}-cm
+  name: {{ include "charta.fullname" . }}-cm
   labels:
-    {{- include "chartA.labels" . | nindent 4 }}
+    {{- include "charta.labels" . | nindent 4 }}
 data: 
   url: google.com
   name: dasari

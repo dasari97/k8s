@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: {{ include "chartA.fullname" . }}
+  name: {{ include "charta.fullname" . }}
   labels:
-    {{- include "chartA.labels" . | nindent 4 }}
+    {{- include "charta.labels" . | nindent 4 }}
 spec:
   containers:
     - name: centos
@@ -13,4 +13,4 @@ spec:
         - "100"
       envFrom:
       - configMapRef:
-          name: {{ include "chartA.fullname" . }}-cm
+          name: {{ include "charta.fullname" . }}-cm
