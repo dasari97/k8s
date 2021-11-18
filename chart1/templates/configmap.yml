@@ -5,5 +5,5 @@ metadata:
   labels:
     {{- include "chart1.labels" . | nindent 4 }}
 data: 
-  url: google.com
-  name: dasari
+  url: cm.google.com
+  name: cm.dasari
