@@ -10,7 +10,7 @@ spec:
       image: centos:7
       command:
         - "sleep"
-        - "30"
+        - "30000"
       envFrom:
       - configMapRef:
           name: {{ include "chart1.fullname" . }}-cm
