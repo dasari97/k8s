@@ -9,8 +9,9 @@ spec:
     - name: {{ .Values.containers.name }}
       image: {{ .Values.containers.image }}
       command:
-        - "sleep"
-        - "30000"
+       {{- range .Values.containers.command }}
+        - {{ . | quote }}
+        {{- end }}
       envFrom:
       - configMapRef:
           name: {{ include "chart1.fullname" . }}-cm
