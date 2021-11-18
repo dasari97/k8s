@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: sample_configmap
+  name: sample
 data: 
   url: google.com
 
