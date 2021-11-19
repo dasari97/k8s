@@ -1,5 +1,5 @@
 podName: pod2
 containers:
-  name: centos
-  image: centos:7
-  command: [ "sleep", "10000" ]
+  name: nginx
+  image: nginx
+  #command: [ "sleep", "10000" ]
