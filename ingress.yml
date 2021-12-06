@@ -8,7 +8,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: "grafana.devopsb58.online"
+    - host: "grafana.krishna.roboshop"
       http:
         paths:
           - pathType: Prefix
@@ -18,7 +18,7 @@ spec:
                 name: pmstack-grafana
                 port:
                   number: 80
-    - host: "prometheus.devopsb58.online"
+    - host: "prometheus.krishna.roboshop"
       http:
         paths:
           - pathType: Prefix
@@ -39,7 +39,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: "roboshop-dev.devopsb58.online"
+    - host: "roboshop-dev.krishna.roboshop"
       http:
         paths:
           - pathType: Prefix
