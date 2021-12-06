@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: schema
+  namespace: dev
+spec:
+  template:
+    spec:
+      containers:
+      - name: schema
+        image: 795902710157.dkr.ecr.us-east-1.amazonaws.com/schema
+        imagePullPolicy: Always
+      restartPolicy: Never
+  backoffLimit: 4
